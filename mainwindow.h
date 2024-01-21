@@ -19,6 +19,11 @@ private slots:
     void on_pushButton_clicked();
     double HP_Cal(double power_input);
     double Force_Cal(double power_input,double rpm_Input);
+
+    void on_housePower_Check_clicked(bool checked);
+
+    void on_Force_Check_clicked(bool checked);
+
 private:
     Ui::MainWindow *ui;
 };

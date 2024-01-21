@@ -15,10 +15,13 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QLineEdit" name="RpmEdit">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>50</y>
+      <y>220</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -26,17 +29,10 @@
     <property name="text">
      <string/>
     </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>30</y>
-      <width>111</width>
-      <height>16</height>
-     </rect>
+    <property name="dragEnabled">
+     <bool>false</bool>
     </property>
-    <property name="text">
+    <property name="placeholderText">
      <string>请输入电动机转速</string>
     </property>
    </widget>
@@ -44,7 +40,7 @@
     <property name="geometry">
      <rect>
       <x>160</x>
-      <y>50</y>
+      <y>220</y>
       <width>113</width>
       <height>20</height>
      </rect>
@@ -52,25 +48,15 @@
     <property name="text">
      <string/>
     </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>30</y>
-      <width>111</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
+    <property name="placeholderText">
      <string>请输入电动机功率</string>
     </property>
    </widget>
    <widget class="QCheckBox" name="housePower_Check">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>270</y>
+      <x>10</x>
+      <y>260</y>
       <width>101</width>
       <height>16</height>
      </rect>
@@ -82,8 +68,8 @@
    <widget class="QCheckBox" name="Force_Check">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>300</y>
+      <x>160</x>
+      <y>260</y>
       <width>101</width>
       <height>16</height>
      </rect>
@@ -108,8 +94,8 @@
    <widget class="QTextEdit" name="Result_text">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>80</y>
+      <x>0</x>
+      <y>10</y>
       <width>271</width>
       <height>181</height>
      </rect>

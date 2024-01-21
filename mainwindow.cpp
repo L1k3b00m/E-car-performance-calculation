@@ -6,7 +6,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+    ui->PowerEdit->setVisible(false);
+    ui->RpmEdit->setVisible(false);
 }
 
 MainWindow::~MainWindow()
@@ -60,3 +61,31 @@ double MainWindow::Force_Cal(double power_input,double rpm_Input){
 }
 //TODO马力倒推转速
 //TODO勾选框条件出现输入栏
+
+
+void MainWindow::on_housePower_Check_clicked(bool checked)
+{
+    bool force_isck = ui->Force_Check->isChecked();
+    if(checked){
+        ui->PowerEdit->setVisible(true);
+    }else if(force_isck){
+        ui->PowerEdit->setVisible(true);
+    }else{
+        ui->PowerEdit->setVisible(false);
+    }
+
+}
+
+void MainWindow::on_Force_Check_clicked(bool checked)
+{
+    bool hp_isck = ui->housePower_Check->isChecked();
+    if(checked){
+        ui->RpmEdit->setVisible(true);
+        ui->PowerEdit->setVisible(true);
+    }else if(hp_isck){
+        ui->RpmEdit->setVisible(false);
+    }else{
+        ui->RpmEdit->setVisible(false);
+        ui->PowerEdit->setVisible(false);
+    }
+}
